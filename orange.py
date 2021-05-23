@@ -9,6 +9,7 @@ MODES:
 1 : appui prolongé de touche
 2 : relacher la touche après un appui prolongé
 """
+
 config = ConfigParser()
 config.read('config.ini')
 if not (config["DEFAULT"]['tvHost']):
@@ -94,24 +95,3 @@ if __name__ == "__main__":
     rConsole = Remote()
     rConsole.getStatus()
     app.run(host="0.0.0.0", port=5555)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
