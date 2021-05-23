@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Télécomande lolt</title>
+</head>
+<body>
+    <p>Le décodeur est {{ "On" if isOn else "Off" }}</p>
+    <div id="tc">
+    {% for i in data %} 
+    <form action="/keyPress" method="POST">
+        <input name="{{i}}" type="hidden" value="{{i}}">
+        <button id="{{i}}" type="submit">{{i}}</button>
+    </form>
+    {% endfor %}
+    </div>
+</body>
+</html>
